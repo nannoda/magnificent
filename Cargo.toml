@@ -1,0 +1,8 @@
+[package]
+name = "magnificent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+relm4 = { version = "0.9.1", features = ["all"] }
+relm4-components = { version = "0.9.1", features = ["libadwaita", "reqwest"] }
