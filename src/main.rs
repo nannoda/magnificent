@@ -24,23 +24,30 @@ impl SimpleComponent for AppModel {
 
             gtk::Box {
                 set_orientation: gtk::Orientation::Vertical,
-                set_spacing: 5,
-                set_margin_all: 5,
 
-                gtk::Button {
-                    set_label: "Increment",
-                    connect_clicked => AppMsg::Increment,
+                adw::HeaderBar {
+
                 },
 
-                gtk::Button {
-                    set_label: "Decrement",
-                    connect_clicked => AppMsg::Decrement,
-                },
-
-                gtk::Label {
-                    #[watch]
-                    set_label: &format!("Counter: {}", model.counter),
+                gtk::Box {
+                    set_orientation: gtk::Orientation::Vertical,
+                    set_spacing: 5,
                     set_margin_all: 5,
+                    gtk::Button {
+                        set_label: "Increment",
+                        connect_clicked => AppMsg::Increment,
+                    },
+
+                    gtk::Button {
+                        set_label: "Decrement",
+                        connect_clicked => AppMsg::Decrement,
+                    },
+
+                    gtk::Label {
+                        #[watch]
+                        set_label: &format!("Counter: {}", model.counter),
+                        set_margin_all: 5,
+                    }
                 }
             }
         }
@@ -73,6 +80,6 @@ impl SimpleComponent for AppModel {
 }
 
 fn main() {
-    let app = RelmApp::new("relm4.example.simple");
+    let app = RelmApp::new("com.nannoda.magnificent");
     app.run::<AppModel>(0);
 }
