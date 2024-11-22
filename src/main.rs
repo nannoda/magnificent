@@ -13,6 +13,8 @@ fn build_ui(app: &Application) {
         println!("File received: {}", file_name);
     }
 
+    // app.add_action(action);
+
     // Create the "Open File..." button
     let button = Button::builder()
         .label("Open File...")
