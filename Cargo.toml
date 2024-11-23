@@ -4,5 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-relm4 = { version = "0.9.1", features = ["all"] }
-relm4-components = { version = "0.9.1", features = ["libadwaita", "reqwest"] }
+eframe = "0.29.1"
+egui = "0.29.1"
+env_logger = "0.11.5"
+log = "0.4.22"
+rfd = "0.15.1"
